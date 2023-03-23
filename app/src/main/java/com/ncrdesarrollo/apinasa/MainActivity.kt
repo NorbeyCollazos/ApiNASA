@@ -6,7 +6,9 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.ncrdesarrollo.apinasa.apodo.view.ApodoViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val viewModel: ApodoViewModel by viewModels()

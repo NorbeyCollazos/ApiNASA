@@ -6,11 +6,14 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ncrdesarrollo.apinasa.apodo.domain.ApodoInteractor
 import com.ncrdesarrollo.apinasa.apodo.util.ApodoModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class ApodoViewModel : ViewModel() {
-
-    private val interactor = ApodoInteractor()
+@HiltViewModel
+class ApodoViewModel @Inject constructor(
+    private val interactor: ApodoInteractor
+) : ViewModel() {
 
     private val _responseApodoModel = MutableLiveData<ApodoModel>()
     val responseApodoModel: LiveData<ApodoModel> get() = _responseApodoModel

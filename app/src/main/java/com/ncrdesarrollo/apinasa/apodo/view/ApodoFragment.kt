@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import com.ncrdesarrollo.apinasa.databinding.FragmentApodoBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ApodoFragment : Fragment() {
 
     private var _binding: FragmentApodoBinding? = null
